@@ -2,7 +2,7 @@
 }
 body {
     display: grid;
-    grid-template: 1fr 4fr / 1fr 3fr;
+    grid-template: 1fr 6fr / 1fr 4fr;
     width: 70%;
     height: 100vh;
     margin: auto;
@@ -17,9 +17,15 @@ body {
     grid-area: 1 / 1 / 3 / 1;
     display: grid;
     grid-template-rows: 0.5fr 4fr 1.5fr;
-    background-color: green;
+    background-color: rgb(53, 131, 233);
     gap: 40px 10px;
     padding: 15px 15px 600px 15px;
+    font-size: 2.5vh;
+}
+.sidebar-icon {
+    justify-self: center;
+    height: 2.5vh;
+    width: auto;
 }
 .sidebar-dashboard {
     display: grid;
@@ -29,22 +35,14 @@ body {
 .sidebar-dashboard > img {
     justify-self: center;
 }
-.sidebar-menu {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
-}
-.sidebar-menu > img {
-    justify-self: center;
-}
+.sidebar-menu,
 .sidebar-settings-menu {
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
+    gap: 2vh 0;
 }
-.sidebar-settings-menu > img {
-    justify-self: center;
-}
+
 .sidebar-icon {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -53,7 +51,9 @@ body {
     display: grid;
     grid-template: 1fr 2fr / 2fr 1fr;
     align-items: center;
-    margin: 3vh 6vh 3vh 5vh;
+    padding: 3vh 6vh 1vh 5vh;
+    gap: 2vh 0;
+    box-shadow: rgba(33, 35, 38, 0.363) 0px 10px 10px -10px;
 }
 .header-searchbar {
     grid-area: 1 / 1 / 2 / 2;
@@ -66,7 +66,12 @@ body {
 }
 .header-searchbar > input {
     width: 85%;
+    height: 3.5vh;
     justify-self: start;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(207, 207, 207, 0.582);
+    margin-left: 1.5vh;
 }
 .header-searchbar > img {
     height: 3vh;
@@ -123,4 +128,40 @@ body {
 .user-quote-name {
     grid-area: 2 / 2 / 3 / 3;
     padding-left: 2vh;
+}
+.header-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 2vh;
+}
+.header-options > * {
+    border: none;
+    border-radius: 20px;
+    width: 10vh;
+    height: 4vh;
+    background-color: rgb(53, 131, 233);
+    color: white;
+    font-weight: bolder;
+}
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: rgb(226, 226, 226);
+}
+.main-projects > h3 {
+    padding-left: 1vh;
+}
+.main-projects-cards {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30vh, 1fr));
+    gap: 3vh;
+    padding: 1vh;
+}
+.project-card {
+    background-color: white;
+    border-left: 1.5vh solid orange;
+    border-radius: 10px;
+    /* width: 38vh; */
+    padding: 1vh;
 }
