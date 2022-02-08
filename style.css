@@ -1,0 +1,126 @@
+:root {
+}
+body {
+    display: grid;
+    grid-template: 1fr 4fr / 1fr 3fr;
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+}
+.header {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.main {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.sidebar {
+    grid-area: 1 / 1 / 3 / 1;
+    display: grid;
+    grid-template-rows: 0.5fr 4fr 1.5fr;
+    background-color: green;
+    gap: 40px 10px;
+    padding: 15px 15px 600px 15px;
+}
+.sidebar-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+.sidebar-dashboard > img {
+    justify-self: center;
+}
+.sidebar-menu {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+.sidebar-menu > img {
+    justify-self: center;
+}
+.sidebar-settings-menu {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+.sidebar-settings-menu > img {
+    justify-self: center;
+}
+.sidebar-icon {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.header {
+    display: grid;
+    grid-template: 1fr 2fr / 2fr 1fr;
+    align-items: center;
+    margin: 3vh 6vh 3vh 5vh;
+}
+.header-searchbar {
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-template-columns: 5% 4fr;
+}
+.header-searchbar > * {
+    display: grid;
+    place-self: center;
+}
+.header-searchbar > input {
+    width: 85%;
+    justify-self: start;
+}
+.header-searchbar > img {
+    height: 3vh;
+    width: auto;
+    justify-self: start;
+}
+.header-user-menu {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr; 
+}
+.header-user-menu > * {
+    display: grid;
+    place-self: center;
+}
+.header-user-menu > img {
+    height: 3.5vh;
+    width: auto;
+    justify-self: end;
+    margin-right: 1vh;
+}
+.header-user-menu-name {
+    justify-self: start;
+    margin-left: 1vh;
+}
+.avatar-photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.user-menu-avatar-div  {
+    border: none;
+    border-radius: 50%;
+    width: 6vh;
+    height: 6vh;
+}
+.user-quote {
+    display: grid;
+    grid-template: 1fr 2fr / 1fr 7fr;
+}
+.user-quote > * {
+    display: grid;
+    align-self: center;
+}
+.user-quote-avatar-div {
+    width: 8vh;
+    height: 8vh;
+    grid-area: 1 / 1 / 3 / 2;
+}
+.user-quote-text {
+    grid-area: 1 / 2 / 2 / 3;
+    padding-left: 2vh;
+}
+.user-quote-name {
+    grid-area: 2 / 2 / 3 / 3;
+    padding-left: 2vh;
+}
